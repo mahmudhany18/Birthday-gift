@@ -1,0 +1,179 @@
+:root{
+
+    --background:#FFF8FB;
+
+    --card:#FFF0F6;
+
+    --primary:#E87AA4;
+
+    --primary-dark:#D85A8B;
+
+    --text:#4E3B47;
+
+    --light:#FFFFFF;
+
+    --shadow:rgba(232,122,164,.18);
+
+}
+
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    margin:0;
+
+    font-family:"Poppins",sans-serif;
+
+    background:
+    radial-gradient(circle at top,#FFEAF2,#FFF7FA 70%);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+    
+    transition:background 1.2s ease;
+
+}
+
+/* Center Everything */
+
+button{
+
+    margin-top:20px;
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        #F08DB5,
+        #E56F9F
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.4s;
+
+    box-shadow:0 15px 35px rgba(240,141,181,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    box-shadow:0 20px 45px rgba(240,141,181,.45);
+
+}
+
+#petals{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    top:0;
+
+    left:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-50px;
+
+    animation:fall linear forwards;
+
+}
+
+.fadeOut{
+
+    animation:fadeOut .9s forwards;
+
+}
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:#fff7fa;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:30px;
+
+}
+
+
+.loaderHeart{
+
+    font-size:70px;
+
+    animation:heartBeat 1.2s infinite;
+
+}
+
+
+@keyframes heartBeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+    }
+
+}
+
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:1s;
+
+}

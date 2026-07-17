@@ -1,0 +1,616 @@
+.memory{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:120px auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:90px;
+
+}
+
+.left{
+
+    flex-direction:row;
+
+}
+
+.right{
+
+    flex-direction:row-reverse;
+
+}
+
+.photoBox{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.polaroid{
+
+    background:white;
+
+    padding:15px 15px 40px;
+
+    border-radius:8px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.18);
+
+    transition:.4s;
+
+    position:relative;
+
+    cursor:pointer;
+
+    overflow:visible;
+
+}
+
+
+.polaroid img{
+
+    width:100%;
+
+    max-width:320px;
+
+    display:block;
+
+    border-radius:5px;
+
+}
+
+.left .polaroid{
+
+    transform:rotate(-4deg);
+
+}
+
+.right .polaroid{
+
+    transform:rotate(4deg);
+
+}
+
+.left .polaroid:hover{
+
+    transform:rotate(-2deg) scale(1.05) translateY(-8px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.25);
+
+}
+
+.right .polaroid:hover{
+
+    transform:rotate(2deg) scale(1.05) translateY(-8px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.25);
+
+}
+
+.photoDate{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:24px;
+
+}
+
+.textBox{
+
+    flex:1;
+
+    background:#fffdfd;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    border:2px solid #ffd7e6;
+
+    box-shadow: 0 18px 45px rgba(0,0,0,.08);
+
+    transition:all .35s ease;
+
+    position:relative;
+
+}
+
+.textBox:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 28px 55px rgba(0,0,0,.12);
+
+}
+
+.textBox h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:45px;
+
+    color:#E65A92;
+
+    margin-bottom:15px;
+
+}
+
+.place{
+
+    color:#B34F75;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+}
+
+.textBox p{
+
+    font-size:18px;
+
+    line-height:2;
+
+    color:#5a4954;
+
+}
+
+.polaroid::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:90px;
+
+    height:28px;
+
+    background:rgba(255,245,180,.75);
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(-6deg);
+
+    border-radius:4px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+
+}
+
+.story{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:80px 0;
+    position:relative;
+
+}
+
+/* STORY PAGE */
+
+
+.storyTitle{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:78px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    color:#4E3B47;
+
+    margin-bottom:90px;
+
+}
+
+.timelineLine{
+
+    position:absolute;
+
+    left:50%;
+
+    top:220px;
+
+    transform:translateX(-50%);
+
+    width:6px;
+
+    height:calc(100% - 220px);
+
+    background:#ffdce8;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+#timelineProgress{
+
+    width:100%;
+
+    height:0;
+
+    background:linear-gradient(
+        to bottom,
+        #ff7bac,
+        #ff4f93
+    );
+
+    border-radius:20px;
+
+    transition:height .15s linear;
+
+}
+
+.largePhoto .polaroid{
+
+    width:420px;
+
+}
+
+.largePhoto .polaroid img{
+
+    max-width:390px;
+
+}
+
+.photoStack{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+.photoStack .polaroid:first-child{
+
+    margin-bottom:60px;
+
+    z-index:2;
+
+}
+
+.photoStack .polaroid:last-child{
+
+    z-index:1;
+
+}
+
+.bigPhoto .polaroid{
+
+    width:450px;
+
+}
+
+.bigPhoto .polaroid img{
+
+    max-width:420px;
+
+}
+
+.storyEnding{
+
+    max-width:900px;
+
+    margin:180px auto 120px;
+
+    text-align:center;
+
+    background:#fffdfd;
+
+    padding:70px;
+
+    border-radius:35px;
+
+    border:2px solid #ffd7e6;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+}
+
+.storyEnding h2{
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:56px;
+
+    color:#E65A92;
+
+    margin-bottom:35px;
+
+}
+
+.storyEnding p{
+
+    font-size:21px;
+
+    line-height:2.1;
+
+    color:#5a4954;
+
+    margin-bottom:50px;
+
+}
+
+#endingButton{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    font-size:22px;
+
+    padding:20px 55px;
+
+    background:linear-gradient(
+        135deg,
+        #F08DB5,
+        #E56F9F
+    );
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    transition:.4s;
+
+    box-shadow:0 15px 35px rgba(240,141,181,.35);
+
+}
+
+
+#endingButton:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    box-shadow:0 20px 45px rgba(240,141,181,.45);
+
+}
+
+/* PHOTO VIEWER */
+
+#photoViewer{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.88);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+#photoViewer.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#viewerImage{
+
+    max-width:85%;
+
+    max-height:85%;
+
+    border-radius:18px;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.55);
+
+    transform:scale(.8);
+
+    transition:.35s;
+
+}
+
+#photoViewer.show #viewerImage{
+
+    transform:scale(1);
+
+}
+
+#closeViewer{
+
+    position:absolute;
+
+    top:25px;
+
+    right:40px;
+
+    font-size:55px;
+
+    color:white;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+/* MEMORY COUNTER */
+
+#memoryCounter{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    width:320px;
+
+    padding:22px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.12),
+        0 0 25px rgba(255,170,200,.15);
+
+    z-index:999;
+
+    transition:.35s ease;
+
+    animation:counterFloat 4s ease-in-out infinite;
+
+}
+
+#memoryNumber{
+
+    display:block;
+
+    color:#E65A92;
+
+    font-weight:600;
+
+    font-size:17px;
+
+    letter-spacing:.5px;
+
+}
+
+#memoryTitle{
+
+    margin-top:14px;
+
+    margin-bottom:18px;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:30px;
+
+    color:#4E3B47;
+
+}
+
+/* Progress Bar */
+
+#counterBar{
+
+    width:100%;
+
+    height:8px;
+
+    background:#F6DDE7;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+#counterFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        #FF8EB8,
+        #E65A92
+    );
+
+    border-radius:20px;
+
+    transition:.4s;
+
+}
+
+#memoryDate{
+
+    margin-bottom:18px;
+
+    color:#B34F75;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+
+@keyframes counterFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.memory{
+
+    transition:.45s ease;
+
+}
+
+.memory.activeMemory{
+
+    transform:scale(1.03);
+
+}
