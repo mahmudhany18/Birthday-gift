@@ -4,14 +4,15 @@ const playlist = [
     "music/gh.mp3",
     "music/s1.mp3",
     "music/s2.mp3",
-    "music/s3.mp3",
-    "music/s4.mp3",
-    "music/s5.mp3",
-    "music/s6.mp3",
-    "music/s7.mp3",
-    "music/s8.mp3",
-    "music/s9.mp3",
-    "music/s10.mp3"
+    "music 2/s3.mp3",
+    "music 2/s4.mp3",
+    "music 2/s5.mp3",
+    "music 3/s6.mp3",
+    "music 3/s7.mp3",
+    "music 3/s8.mp3",
+    "music 4/s9.mp3",
+    "music 4/s10.mp3",
+    "music 4/s11.mp3"
 ];
 
 let currentSong =
